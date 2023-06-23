@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const postSchema = new mongoose.Schema({
+const postSchema = mongoose.Schema({
     title: String,
     message: String,
     creator: String,
@@ -8,14 +8,14 @@ const postSchema = new mongoose.Schema({
     selectedFile: String,
     likeCount: {
         type: Number,
-        default: 0
+        default: 0,
     },
-    creatAt: {
+    createdAt: {
         type: Date,
-        default: new Date()
-    }
+        default: new Date(),
+    },
 })
 
-let PostMessage = mongoose.model('PostMessage', postSchema)
+var PostMessage = mongoose.model('PostMessage', postSchema);
 
-export default PostMessage
+export default PostMessage;
