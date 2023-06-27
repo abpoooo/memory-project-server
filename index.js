@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://abpo:abpo123@abpo1.bmg3rhe.mongodb.net/?retryWrites=true&w=majority';
+const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT|| 5000;
 
 const client = new MongoClient(CONNECTION_URL, {
